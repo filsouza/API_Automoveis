@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "51972bdb-4b5e-4957-8712-2c7b95ac3196",
+		"name": "Registro de Utilização API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20555763"
+	},
+	"item": [
+		{
+			"name": "Registrar Utilização",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataInicio\": \"2023-08-23\",\r\n    \"nomeMotorista\": \"João\",\r\n    \"automovelUtilizado\": \"Civic\",\r\n    \"motivo\": \"Emprestimo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/utilizacaoAutomovel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"utilizacaoAutomovel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar Utilização",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataFinalizacao\":\"2023-08-2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/utilizacaoAutomovel?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"utilizacaoAutomovel"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Todas as Utilizações",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/utilizacaoAutomovel?nomeMotorista=João&automovel=Civic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"utilizacaoAutomovel"
+					],
+					"query": [
+						{
+							"key": "nomeMotorista",
+							"value": "João"
+						},
+						{
+							"key": "automovel",
+							"value": "Civic"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
