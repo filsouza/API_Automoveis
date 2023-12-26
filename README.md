@@ -1,5 +1,5 @@
 # API_Automoveis
-### Este repositório contém um teste técnico desenvolvido em JavaScript.
+### Este repositório contém um teste técnico desenvolvido para empresa Seidor.
 
 * Para executar o projeto, siga os passos abaixo:
 
